@@ -1,4 +1,4 @@
-package cn.spannerbear.cmvpdemo;
+package cn.spannerbear.mcvpdemo;
 
 import org.junit.Test;
 

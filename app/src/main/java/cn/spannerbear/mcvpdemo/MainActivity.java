@@ -1,4 +1,4 @@
-package cn.spannerbear.cmvpdemo;
+package cn.spannerbear.mcvpdemo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import cn.spannerbear.cmvpdemo.normal.SubmitOrderActivity;
+import cn.spannerbear.mcvpdemo.normal.SubmitOrderActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     
@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.btn_mcvp:
-                Intent intent2 = new Intent(this, cn.spannerbear.cmvpdemo.mcvp.SubmitOrderActivity.class);
+                Intent intent2 = new Intent(this, cn.spannerbear.mcvpdemo.mcvp.SubmitOrderActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.btn_rxmcvp:
-                Intent intent3 = new Intent(this, cn.spannerbear.cmvpdemo.rxmcvp.SubmitOrderActivity.class);
+                Intent intent3 = new Intent(this, cn.spannerbear.mcvpdemo.rxmcvp.SubmitOrderActivity.class);
                 startActivity(intent3);
                 break;
         }

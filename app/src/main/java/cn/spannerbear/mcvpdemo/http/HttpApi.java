@@ -1,7 +1,7 @@
-package cn.spannerbear.cmvpdemo.http;
+package cn.spannerbear.mcvpdemo.http;
 
-import cn.spannerbear.cmvpdemo.SubmitOrderEntity;
-import cn.spannerbear.cmvpdemo.SubmitResultEntity;
+import cn.spannerbear.mcvpdemo.SubmitOrderEntity;
+import cn.spannerbear.mcvpdemo.SubmitResultEntity;
 import io.reactivex.Observable;
 
 /**

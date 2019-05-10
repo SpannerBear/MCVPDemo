@@ -1,4 +1,4 @@
-package cn.spannerbear.cmvpdemo;
+package cn.spannerbear.mcvpdemo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

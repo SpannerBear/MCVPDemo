@@ -1,6 +1,6 @@
-package cn.spannerbear.cmvpdemo.normal;
+package cn.spannerbear.mcvpdemo.normal;
 
-import cn.spannerbear.cmvpdemo.SubmitOrderEntity;
+import cn.spannerbear.mcvpdemo.SubmitOrderEntity;
 
 /**
  * Created by SpannerBear on 2019/5/8.

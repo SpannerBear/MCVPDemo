@@ -1,9 +1,9 @@
-package cn.spannerbear.cmvpdemo.mcvp;
+package cn.spannerbear.mcvpdemo.mcvp;
 
-import cn.spannerbear.cmvpdemo.CallBack;
-import cn.spannerbear.cmvpdemo.SubmitResultEntity;
-import cn.spannerbear.cmvpdemo.SubmitOrderEntity;
-import cn.spannerbear.cmvpdemo.http.HttpApi;
+import cn.spannerbear.mcvpdemo.CallBack;
+import cn.spannerbear.mcvpdemo.SubmitResultEntity;
+import cn.spannerbear.mcvpdemo.SubmitOrderEntity;
+import cn.spannerbear.mcvpdemo.http.HttpApi;
 
 /**
  * Created by SpannerBear on 2019/5/8.

@@ -1,19 +1,22 @@
-package cn.spannerbear.cmvpdemo.mcvp;
+package cn.spannerbear.mcvpdemo.rxmcvp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import cn.spannerbear.cmvpdemo.CallBack;
-import cn.spannerbear.cmvpdemo.InquiryDialog;
-import cn.spannerbear.cmvpdemo.R;
-import cn.spannerbear.cmvpdemo.SubmitOrderEntity;
+import cn.spannerbear.mcvpdemo.InquiryDialog;
+import cn.spannerbear.mcvpdemo.R;
+import cn.spannerbear.mcvpdemo.SubmitOrderEntity;
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 
 public class SubmitOrderActivity extends AppCompatActivity implements SubmitOrderContract.IView {
     
     
     private SubmitOrderPresenter mSubmitOrderPresenter;
+    private InquiryDialog mDialog;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +33,25 @@ public class SubmitOrderActivity extends AppCompatActivity implements SubmitOrde
     }
     
     @Override
-    public void askUserForUpgrade(final CallBack<Boolean> callback) {
-        final InquiryDialog dialog = new InquiryDialog(this);
-        dialog.setOnResultListener(new InquiryDialog.OnResultListener() {
+    public Observable<Boolean> askUserForUpgrade() {
+        if (mDialog == null) {
+            mDialog = new InquiryDialog(this);
+        }
+        Observable<Boolean> booleanObservable = Observable.create(new ObservableOnSubscribe<Boolean>() {
             @Override
-            public void onResult(boolean result) {
-                dialog.dismiss();
-                callback.onResult(result);
+            public void subscribe(final ObservableEmitter<Boolean> emitter) throws Exception {
+                mDialog.setOnResultListener(new InquiryDialog.OnResultListener() {
+                    @Override
+                    public void onResult(boolean result) {
+                        mDialog.dismiss();
+                        emitter.onNext(result);
+                        emitter.onComplete();
+                    }
+                });
             }
         });
-        dialog.show();
+        mDialog.show();
+        return booleanObservable;
     }
     
     @Override

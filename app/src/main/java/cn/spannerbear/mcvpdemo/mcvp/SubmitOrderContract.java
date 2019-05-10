@@ -1,7 +1,7 @@
-package cn.spannerbear.cmvpdemo.rxmcvp;
+package cn.spannerbear.mcvpdemo.mcvp;
 
-import cn.spannerbear.cmvpdemo.SubmitOrderEntity;
-import io.reactivex.Observable;
+import cn.spannerbear.mcvpdemo.CallBack;
+import cn.spannerbear.mcvpdemo.SubmitOrderEntity;
 
 /**
  * Created by SpannerBear on 2019/5/8.
@@ -10,10 +10,10 @@ import io.reactivex.Observable;
 public interface SubmitOrderContract {
     
     interface IView {
-        Observable<Boolean> askUserForUpgrade();
+        void askUserForUpgrade(CallBack<Boolean> callback);
         
         void onSubmitSucceed();
-    
+        
         void onSubmitFailed();
     }
     

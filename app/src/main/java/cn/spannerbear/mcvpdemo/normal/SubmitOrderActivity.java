@@ -1,13 +1,13 @@
-package cn.spannerbear.cmvpdemo.normal;
+package cn.spannerbear.mcvpdemo.normal;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import cn.spannerbear.cmvpdemo.InquiryDialog;
-import cn.spannerbear.cmvpdemo.R;
-import cn.spannerbear.cmvpdemo.SubmitOrderEntity;
+import cn.spannerbear.mcvpdemo.InquiryDialog;
+import cn.spannerbear.mcvpdemo.R;
+import cn.spannerbear.mcvpdemo.SubmitOrderEntity;
 
 public class SubmitOrderActivity extends AppCompatActivity implements SubmitOrderContract.IView {
     

@@ -1,4 +1,4 @@
-package cn.spannerbear.cmvpdemo;
+package cn.spannerbear.mcvpdemo;
 
 import android.app.Dialog;
 import android.content.Context;

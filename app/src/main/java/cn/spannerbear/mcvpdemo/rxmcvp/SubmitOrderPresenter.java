@@ -1,10 +1,10 @@
-package cn.spannerbear.cmvpdemo.rxmcvp;
+package cn.spannerbear.mcvpdemo.rxmcvp;
 
 import android.annotation.SuppressLint;
 
-import cn.spannerbear.cmvpdemo.SubmitOrderEntity;
-import cn.spannerbear.cmvpdemo.SubmitResultEntity;
-import cn.spannerbear.cmvpdemo.http.HttpApi;
+import cn.spannerbear.mcvpdemo.SubmitOrderEntity;
+import cn.spannerbear.mcvpdemo.SubmitResultEntity;
+import cn.spannerbear.mcvpdemo.http.HttpApi;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.functions.Consumer;
